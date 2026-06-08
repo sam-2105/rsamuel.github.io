@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Optimization -->
+    <title>Samuel R | Cyber Security Analyst & SOC Analyst</title>
+    <meta name="description"
+        content="Professional Cyber Security Analyst & SOC Analyst portfolio for Samuel R. Experienced in SIEM operations (Splunk, Wazuh), threat intelligence, vulnerability scanning, and incident investigation.">
+    <meta name="keywords"
+        content="Samuel R, SOC Analyst, Cyber Security Analyst, Blue Team, Incident Response, Splunk, Wazuh, Threat Detection, Tamil Nadu, Security Operations, Wireshark, Nessus">
+    <meta name="author" content="Samuel R">
+
+    <!-- Open Graph for Social Links -->
+    <meta property="og:title" content="Samuel R | Cyber Security Analyst & SOC Analyst">
+    <meta property="og:description"
+        content="Securing digital infrastructure through log monitoring, threat hunting, and automated incident triage. View portfolio and interactive terminal.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rsamuel2105.github.io">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Canvas Background for Network Simulation -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Overlay Effects -->
+    <div class="grid-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" id="nav-logo-ref">
+                Samuel.R
+            </a>
+            <button class="nav-toggle" aria-label="Toggle Navigation Menu">&#9776;</button>
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#certifications" class="nav-link">Certs</a>
+                <a href="#labs" class="nav-link">Labs</a>
+                <a href="#cases" class="nav-link">Case Studies</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="resume.html" class="nav-cta" target="_blank">Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-pulse"></span> SECURE MODE: MONITORING ACTIVE
+                </div>
+                <h1 class="hero-title">Securing Digital Infrastructure Through Threat Detection & Security Monitoring
+                </h1>
+                <div class="hero-typing">
+                    &gt; <span id="hero-typing-target"></span><span class="typed-cursor"></span>
+                </div>
+                <p class="hero-sub">
+                    Aspiring SOC Analyst with hands-on experience in SIEM monitoring, threat detection, incident
+                    investigation, and security operations.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" id="btn-view-proj">View Projects</a>
+                    <a href="resume.html" class="btn btn-secondary" id="btn-dl-cv" target="_blank">Download Resume</a>
+                    <a href="#contact" class="btn btn-outline" id="btn-contact-me">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <!-- System Dashboard Console -->
+                <div class="cyber-console">
+                    <div class="console-header">
+                        <div class="console-dots">
+                            <span class="console-dot red"></span>
+                            <span class="console-dot yellow"></span>
+                            <span class="console-dot green"></span>
+                        </div>
+                        <div class="console-title">SEC-OPS DASHBOARD v1.0.2</div>
+                    </div>
+                    <div class="console-body">
+                        <div class="console-line">
+                            <span class="console-prompt">admin@host:~$</span>
+                            <span class="console-output">chkconfig --status firewall</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-output success">[OK] UFW firewall loaded successfully.</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-prompt">admin@host:~$</span>
+                            <span class="console-output">netstat -an | grep LISTEN</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-output">TCP 127.0.0.1:5432 - LISTENING</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-output">TCP 0.0.0.0:443 - LISTENING</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-prompt">admin@host:~$</span>
+                            <span class="console-output">tail -n 1 /var/log/auth.log</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-output warning">Jun 08 19:43:28 secure-agent sshd[4401]: Connection
+                                closed by authenticating user root</span>
+                        </div>
+
+                        <div class="console-grid-status">
+                            <div class="status-box">
+                                <div class="status-label">SOC AGENT STATE</div>
+                                <div class="status-val online">MONITORING</div>
+                            </div>
+                            <div class="status-box">
+                                <div class="status-label">HEALTH</div>
+                                <div class="status-val">99.98% SECURE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive SOC Terminal Simulator Section -->
+    <section class="terminal-section" id="terminal">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">SECURE TERMINAL ACCESS</span>
+            <h2 class="sec-title" id="terminal-section-heading">Interactive Analyst Console</h2>
+        </div>
+        <div class="soc-terminal-wrap">
+            <div class="soc-terminal">
+                <div class="term-header">
+                    <span class="term-badge">SECURE CLIENT v2.4</span>
+                    <span class="console-title">GUEST_USER@SAMUEL</span>
+                </div>
+                <div class="term-body" id="terminal-body">
+                    <div class="term-history" id="terminal-history"></div>
+                    <div class="term-input-row">
+                        <span class="term-prompt">guest@samuel-soc-terminal:~$</span>
+                        <input type="text" class="term-input-field" id="terminal-input" placeholder="Type a command..."
+                            autocomplete="off" autofocus>
+                    </div>
+                </div>
+            </div>
+            <div class="term-quick-btns">
+                <button class="term-btn" data-cmd="help">help</button>
+                <button class="term-btn" data-cmd="about">about</button>
+                <button class="term-btn" data-cmd="skills">skills</button>
+                <button class="term-btn" data-cmd="projects">projects</button>
+                <button class="term-btn" data-cmd="certs">certs</button>
+                <button class="term-btn" data-cmd="analyze">analyze</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">SEC-OFFICER IDENTIFICATION</span>
+            <h2 class="sec-title" id="about-section-heading">About Samuel R</h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-graphic">
+                <div class="profile-avatar">
+                    <img src="profile.jpg" alt="Samuel R" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3 style="font-family: var(--font-mono); font-size: 1.6rem; color: #fff; margin-bottom: 0.25rem;">
+                    Samuel R</h3>
+                <span
+                    style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--cyan); text-transform: uppercase;">Cyber
+                    Security Specialist</span>
+
+                <div class="about-metric-row">
+                    <div class="about-metric-card">
+                        <div class="about-metric-num counter-animate" data-target="9">0</div>
+                        <div class="about-metric-title">Credentials</div>
+                    </div>
+                    <div class="about-metric-card">
+                        <div class="about-metric-num counter-animate" data-target="150">0</div>
+                        <div class="about-metric-title">Labs Completed</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <p>
+                    I am an aspiring SOC Analyst and Cyber Security Analyst with a focus on log monitoring,
+                    incident triage, and blue team engineering. Based in Tamil Nadu, India, I dedicate my focus to
+                    securing digital assets and hardening host endpoints.
+                </p>
+                <p>
+                    My educational foundation is backed by extensive self-directed training and structured laboratory
+                    environments. I specialize in analyzing log pipelines using Splunk and Wazuh EDR,
+                    identifying vulnerabilities using Nessus, analyzing packet capture details via Wireshark,
+                    and mapping attacker techniques using the MITRE ATT&CK framework.
+                </p>
+                <p>
+                    I am highly motivated to work in dynamic Security Operations Centers (SOC) where I can apply alert
+                    diagnostics, support threat containerization, analyze log parameters, and continuously learn to
+                    combat evolving threat landscapes.
+                </p>
+
+                <div class="about-core-focus">
+                    <div class="focus-card">
+                        <div class="focus-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="focus-title">SIEM Monitoring</h4>
+                            <p class="focus-desc">Configuring event rules, correlating alarms, and parsing firewall and
+                                OS events.</p>
+                        </div>
+                    </div>
+
+                    <div class="focus-card">
+                        <div class="focus-icon-wrap">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10zm1-15h-2v4H7v2h4v4h2v-4h4v-2h-4V7z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="focus-title">Incident Response</h4>
+                            <p class="focus-desc">Identifying containment requirements, isolating hosts, and extracting
+                                Indicators of Compromise (IOC).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">SECURITY TOOLBAG & PROTOCOLS</span>
+            <h2 class="sec-title" id="skills-section-heading">Skills Directory</h2>
+        </div>
+
+        <div class="skills-grid">
+            <!-- SIEM & Monitoring -->
+            <div class="glass-card skill-category-card" id="skill-cat-siem">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-icon">🛡️</span>
+                    <h3 class="skill-cat-title">SIEM & Monitoring</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Splunk</span>
+                    <span class="skill-tag">Wazuh EDR</span>
+                    <span class="skill-tag">Log Analysis</span>
+                    <span class="skill-tag">Alert Investigation</span>
+                    <span class="skill-tag">Event Correlation</span>
+                </div>
+            </div>
+
+            <!-- Threat Detection -->
+            <div class="glass-card skill-category-card" id="skill-cat-threat">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-icon">🏹</span>
+                    <h3 class="skill-cat-title">Threat Detection</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">MITRE ATT&CK</span>
+                    <span class="skill-tag">IOC Analysis</span>
+                    <span class="skill-tag">Threat Intel</span>
+                    <span class="skill-tag">SIGMA Rules</span>
+                    <span class="skill-tag">YARA Signatures</span>
+                </div>
+            </div>
+
+            <!-- Security Tools -->
+            <div class="glass-card skill-category-card" id="skill-cat-tools">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-icon">⚙️</span>
+                    <h3 class="skill-cat-title">Security Tools</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Nessus</span>
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">OSINT Tools</span>
+                    <span class="skill-tag">Nmap</span>
+                </div>
+            </div>
+
+            <!-- Networking -->
+            <div class="glass-card skill-category-card" id="skill-cat-network">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-icon">🌐</span>
+                    <h3 class="skill-cat-title">Networking</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">TCP/IP</span>
+                    <span class="skill-tag">DNS Security</span>
+                    <span class="skill-tag">HTTP/HTTPS</span>
+                    <span class="skill-tag">Packet Analysis</span>
+                    <span class="skill-tag">Firewall Basics</span>
+                </div>
+            </div>
+
+            <!-- Operating Systems -->
+            <div class="glass-card skill-category-card" id="skill-cat-os">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-icon">💻</span>
+                    <h3 class="skill-cat-title">Operating Systems</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">Kali Linux</span>
+                    <span class="skill-tag">Linux Security</span>
+                    <span class="skill-tag">Windows Security</span>
+                    <span class="skill-tag">Active Directory</span>
+                </div>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="glass-card skill-category-card" id="skill-cat-frameworks">
+                <div class="skill-cat-header">
+                    <span class="skill-cat-icon">📋</span>
+                    <h3 class="skill-cat-title">Frameworks & Standards</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag">OWASP Top 10</span>
+                    <span class="skill-tag">ISO 27001</span>
+                    <span class="skill-tag">GDPR</span>
+                    <span class="skill-tag">HIPAA Compliance</span>
+                    <span class="skill-tag">NIST CSF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">PROTOTYPES & LAB EXPERIMENTS</span>
+            <h2 class="sec-title" id="projects-section-heading">Featured Security Work</h2>
+        </div>
+
+        <div class="projects-container">
+            <!-- Project 1: SecureID Network -->
+            <div class="project-card" id="project-secureid">
+                <div class="project-info-wrap">
+                    <span class="project-tag">DECENTRALIZED ARCHITECTURE</span>
+                    <h3 class="project-name">SECUREID NETWORK</h3>
+                    <div class="project-desc-text">
+                        Blockchain-based digital identity validation framework targeting modern user authorization
+                        issues.
+                    </div>
+
+                    <div class="project-problem">
+                        <div class="project-problem-label">
+                            <span class="hero-pulse" style="background:var(--red); animation:none;"></span>
+                            PROBLEM VECTOR:
+                        </div>
+                        <div class="project-problem-desc">
+                            Centralized databases represent primary targets for credential theft and identity spoofing
+                            (MITM attacks).
+                        </div>
+                    </div>
+
+                    <div class="project-specs">
+                        <h4 class="specs-title">Security Features</h4>
+                        <div class="specs-list">
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Decoupled Signatures
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Anti-Spoofing Anchors
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Smart Contract Verification
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Cryptographic Ledger Logs
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">Solidity</span>
+                        <span class="tech-badge">Web3.js</span>
+                        <span class="tech-badge">Cryptography</span>
+                        <span class="tech-badge">Zero-Trust</span>
+                    </div>
+
+                    <a href="https://github.com/sam-2105/secureidnetwork.git" class="btn btn-secondary" target="_blank"
+                        id="btn-secureid-git">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Code Repository
+                    </a>
+                </div>
+
+                <div class="project-visual">
+                    <span class="project-visual-label">Interactive System Architecture</span>
+                    <!-- SecureID Interactive SVG Diagram -->
+                    <svg viewBox="0 0 400 300" class="interactive-svg-diag">
+                        <!-- Background Grid Lines inside SVG -->
+                        <line x1="0" y1="150" x2="400" y2="150" stroke="rgba(0,240,255,0.05)" />
+                        <line x1="200" y1="0" x2="200" y2="300" stroke="rgba(0,240,255,0.05)" />
+
+                        <!-- Connectors with animation -->
+                        <path d="M 80 150 L 200 80" stroke="var(--cyan)" stroke-width="1.5" fill="none"
+                            class="svg-connector" />
+                        <path d="M 80 150 L 200 220" stroke="var(--cyan)" stroke-width="1.5" fill="none"
+                            class="svg-connector" />
+                        <path d="M 200 80 L 320 150" stroke="var(--purple)" stroke-width="1.5" fill="none"
+                            class="svg-connector" />
+                        <path d="M 200 220 L 320 150" stroke="var(--purple)" stroke-width="1.5" fill="none"
+                            class="svg-connector" />
+
+                        <!-- Node 1: User Client -->
+                        <g class="svg-node"
+                            data-info="Client Gateway: Submits signed credentials utilizing cryptographic keys.">
+                            <circle cx="80" cy="150" r="28" fill="rgba(8, 14, 32, 0.9)" stroke="var(--cyan)"
+                                stroke-width="2" />
+                            <text x="80" y="154" font-family="var(--font-mono)" font-size="9" fill="#fff"
+                                text-anchor="middle">CLIENT</text>
+                            <circle cx="80" cy="150" r="34" fill="none" stroke="rgba(0, 240, 255, 0.2)"
+                                stroke-dasharray="3" />
+                        </g>
+
+                        <!-- Node 2: Smart Contract A -->
+                        <g class="svg-node"
+                            data-info="Identity Registrar Contract: Assesses validation proofs against on-chain records.">
+                            <circle cx="200" cy="80" r="28" fill="rgba(8, 14, 32, 0.9)" stroke="var(--purple)"
+                                stroke-width="2" />
+                            <text x="200" y="84" font-family="var(--font-mono)" font-size="9" fill="#fff"
+                                text-anchor="middle">REGISTRAR</text>
+                        </g>
+
+                        <!-- Node 3: Smart Contract B -->
+                        <g class="svg-node"
+                            data-info="Audit Log Contract: Immutable record log storage mapping identity operations.">
+                            <circle cx="200" cy="220" r="28" fill="rgba(8, 14, 32, 0.9)" stroke="var(--purple)"
+                                stroke-width="2" />
+                            <text x="200" y="224" font-family="var(--font-mono)" font-size="9" fill="#fff"
+                                text-anchor="middle">AUDIT LOG</text>
+                        </g>
+
+                        <!-- Node 4: Blockchain Anchor -->
+                        <g class="svg-node"
+                            data-info="Consensus Node: Block validation and state anchoring on distributed database.">
+                            <rect x="292" y="122" width="56" height="56" rx="8" fill="rgba(8, 14, 32, 0.9)"
+                                stroke="var(--green)" stroke-width="2" />
+                            <text x="320" y="154" font-family="var(--font-mono)" font-size="9" fill="#fff"
+                                text-anchor="middle">BLOCK</text>
+                            <circle cx="320" cy="150" r="34" fill="none" stroke="rgba(0, 255, 102, 0.2)"
+                                stroke-dasharray="3" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Project 2: HashLock -->
+            <div class="project-card" id="project-hashlock">
+                <div class="project-info-wrap">
+                    <span class="project-tag">INTEGRITY & MONITORING</span>
+                    <h3 class="project-name">HASHLOCK</h3>
+                    <div class="project-desc-text">
+                        A lightweight file integrity monitoring tool that detects real-time tampering inside target
+                        directories.
+                    </div>
+
+                    <div class="project-problem">
+                        <div class="project-problem-label">
+                            <span class="hero-pulse" style="background:var(--red); animation:none;"></span>
+                            PROBLEM VECTOR:
+                        </div>
+                        <div class="project-problem-desc">
+                            System compromise often involves modifying executable binaries or loading rootkits
+                            undetected.
+                        </div>
+                    </div>
+
+                    <div class="project-specs">
+                        <h4 class="specs-title">Operations Workflow</h4>
+                        <div class="specs-list">
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Directory Recursive Scans
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                SHA-256 Checksum Validate
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Real-time Tamper Alerts
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                CSV State Base Databases
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Watchdog API</span>
+                        <span class="tech-badge">SHA-256</span>
+                        <span class="tech-badge">Alert Logging</span>
+                    </div>
+
+                    <a href="https://github.com/sam-2105/HashLock-.git" class="btn btn-secondary" target="_blank"
+                        id="btn-hashlock-git">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Code Repository
+                    </a>
+                </div>
+
+                <div class="project-visual">
+                    <span class="project-visual-label">FIM Process Pipeline</span>
+                    <!-- Hashlock SVG workflow -->
+                    <svg viewBox="0 0 400 300" class="interactive-svg-diag">
+                        <!-- Connectors with animation -->
+                        <path d="M 60 150 L 140 150" stroke="var(--cyan)" stroke-width="2" class="svg-connector" />
+                        <path d="M 200 150 L 280 100" stroke="var(--cyan)" stroke-width="1.5" class="svg-connector" />
+                        <path d="M 200 150 L 280 200" stroke="var(--purple)" stroke-width="1.5" class="svg-connector" />
+
+                        <!-- Node 1: Target Folder File -->
+                        <g class="svg-node"
+                            data-info="Directory Scanner: Recursive scan picks up changes in watched files.">
+                            <rect x="20" y="120" width="40" height="60" rx="4" fill="rgba(8, 14, 32, 0.9)"
+                                stroke="var(--cyan)" stroke-width="2" />
+                            <text x="40" y="154" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">FILES</text>
+                        </g>
+
+                        <!-- Node 2: Crypto Hashing -->
+                        <g class="svg-node" data-info="Hash Generator: Computes SHA-256 checksum value dynamically.">
+                            <circle cx="170" cy="150" r="30" fill="rgba(8, 14, 32, 0.9)" stroke="var(--purple)"
+                                stroke-width="2" />
+                            <text x="170" y="153" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">SHA-256</text>
+                            <circle cx="170" cy="150" r="36" fill="none" stroke="rgba(189, 0, 255, 0.2)"
+                                stroke-dasharray="4" />
+                        </g>
+
+                        <!-- Node 3: State Verification Success -->
+                        <g class="svg-node"
+                            data-info="Normal State: Hash matches registry baseline. No changes detected.">
+                            <circle cx="310" cy="100" r="24" fill="rgba(8, 14, 32, 0.9)" stroke="var(--green)"
+                                stroke-width="2" />
+                            <text x="310" y="103" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">MATCH</text>
+                        </g>
+
+                        <!-- Node 4: Alert Notification Failure -->
+                        <g class="svg-node"
+                            data-info="Tamper Incident: Hash mismatch detected. Alert logged to SIEM console.">
+                            <circle cx="310" cy="200" r="24" fill="rgba(8, 14, 32, 0.9)" stroke="var(--red)"
+                                stroke-width="2" />
+                            <text x="310" y="203" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">ALERT</text>
+                            <circle cx="310" cy="200" r="30" fill="none" stroke="rgba(255, 62, 62, 0.3)"
+                                stroke-dasharray="2" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">QUALIFICATION & TRAINING LOGS</span>
+            <h2 class="sec-title" id="certs-section-heading">Professional Credentials</h2>
+        </div>
+
+        <div class="certs-grid">
+            <!-- Cert 1 -->
+            <div class="glass-card cert-card" id="cert-csa">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🛡️</span>
+                    <span class="cert-verify-badge">✓ ACTIVE</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Certified SOC Analyst (CSA)</h3>
+                    <span class="cert-issuer">EC-Council</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Credential ID: EC-CSA-4412</span>
+                </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="glass-card cert-card" id="cert-btlo">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🛡️</span>
+                    <span class="cert-verify-badge">✓ ACTIVE</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Certified Blue Team Practitioner</h3>
+                    <span class="cert-issuer">Security Blue Team</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Blue Team Defensive Operations</span>
+                </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="glass-card cert-card" id="cert-soc-analyst">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🛡️</span>
+                    <span class="cert-verify-badge">✓ ACTIVE</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Certified IT Infrastructure & Cyber SOC Analyst</h3>
+                    <span class="cert-issuer">Industry Academy Training</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Infrastructure Security & Monitoring</span>
+                </div>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="glass-card cert-card" id="cert-cnsp">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🛡️</span>
+                    <span class="cert-verify-badge">✓ ACTIVE</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Certified Network Security Practitioner</h3>
+                    <span class="cert-issuer">The SecOps Group</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Network Analysis & Firewall Operations</span>
+                </div>
+            </div>
+
+            <!-- Cert 5 -->
+            <div class="glass-card cert-card" id="cert-csi">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🕵️</span>
+                    <span class="cert-verify-badge">✓ ACTIVE</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">CSI Linux Certified Investigator</h3>
+                    <span class="cert-issuer">CSI Linux Academy</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Digital Forensics & OSINT</span>
+                </div>
+            </div>
+
+            <!-- Cert 6 -->
+            <div class="glass-card cert-card" id="cert-cisco">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🌐</span>
+                    <span class="cert-verify-badge">✓ VERIFIED</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Introduction to Cybersecurity</h3>
+                    <span class="cert-issuer">Cisco Networking Academy</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Fundamentals of Networking & Security</span>
+                </div>
+            </div>
+
+            <!-- Cert 7 -->
+            <div class="glass-card cert-card" id="cert-java">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">☕</span>
+                    <span class="cert-verify-badge">✓ VERIFIED</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Programming in Java</h3>
+                    <span class="cert-issuer">NPTEL</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Object-Oriented Logic Development</span>
+                </div>
+            </div>
+
+            <!-- Cert 8 -->
+            <div class="glass-card cert-card" id="cert-cloud">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">☁️</span>
+                    <span class="cert-verify-badge">✓ VERIFIED</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">Cloud Computing</h3>
+                    <span class="cert-issuer">NPTEL</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Cloud Architecture & Security Basics</span>
+                </div>
+            </div>
+
+            <!-- Cert 9 -->
+            <div class="glass-card cert-card" id="cert-php-mysql">
+                <div class="cert-header">
+                    <span class="cert-icon-wrap">🐘</span>
+                    <span class="cert-verify-badge">✓ VERIFIED</span>
+                </div>
+                <div>
+                    <h3 class="cert-name">PHP and MySQL</h3>
+                    <span class="cert-issuer">Spoken Tutorial (IIT Bombay)</span>
+                </div>
+                <div class="cert-meta">
+                    <span>Web Development & Database Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Labs & Platforms Badges -->
+    <section id="labs">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">LAB SIMULATION METRICS</span>
+            <h2 class="sec-title" id="labs-section-heading">Training Platforms</h2>
+        </div>
+
+        <div class="labs-grid">
+            <!-- Platform 1 -->
+            <div class="glass-card lab-badge-card" id="lab-thm">
+                <div class="lab-logo-wrap">THM</div>
+                <h3 class="lab-name">TryHackMe</h3>
+                <span class="lab-status">Ranked Top 1%</span>
+            </div>
+
+            <!-- Platform 2 -->
+            <div class="glass-card lab-badge-card" id="lab-btlo-badge">
+                <div class="lab-logo-wrap">BTLO</div>
+                <h3 class="lab-name">Blue Team Labs</h3>
+                <span class="lab-status">Incident Labs Solved</span>
+            </div>
+
+            <!-- Platform 3 -->
+            <div class="glass-card lab-badge-card" id="lab-portswigger">
+                <div class="lab-logo-wrap">PS</div>
+                <h3 class="lab-name">PortSwigger</h3>
+                <span class="lab-status">Web App Academy</span>
+            </div>
+
+            <!-- Platform 4 -->
+            <div class="glass-card lab-badge-card" id="lab-pentesterlab">
+                <div class="lab-logo-wrap">PL</div>
+                <h3 class="lab-name">PentesterLab</h3>
+                <span class="lab-status">Badge Level IV</span>
+            </div>
+
+            <!-- Platform 5 -->
+            <div class="glass-card lab-badge-card" id="lab-pentestgarage">
+                <div class="lab-logo-wrap">PG</div>
+                <h3 class="lab-name">Pentest Garage</h3>
+                <span class="lab-status">Network Targets</span>
+            </div>
+
+            <!-- Platform 6 -->
+            <div class="glass-card lab-badge-card" id="lab-ecilabs">
+                <div class="lab-logo-wrap">iLAB</div>
+                <h3 class="lab-name">EC-Council iLabs</h3>
+                <span class="lab-status">SOC Simulation Practice</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="cases">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">DETAILED SOC INVESTIGATIONS</span>
+            <h2 class="sec-title" id="cases-section-heading">Incident Reports & Analysis</h2>
+        </div>
+
+        <div class="cases-grid">
+            <!-- Case Study 1 -->
+            <div class="glass-card case-card" id="case-malware">
+                <div>
+                    <div class="case-icon-label">📁 MALWARE ANALYSIS</div>
+                    <h3 class="case-title">Trojan Agent Analysis</h3>
+                    <p class="case-summary">
+                        Static and dynamic diagnostics of an obfuscated Windows executable. Extracted C2 network
+                        indicators.
+                    </p>
+                    <div class="case-workflow">
+                        <div class="wf-step">✔️ Isolated in Sandbox</div>
+                        <div class="wf-step">✔️ Monitored Process Hooks</div>
+                        <div class="wf-step">✔️ Blocked C2 Domain</div>
+                    </div>
+                </div>
+                <button class="case-btn"
+                    onclick="alert('Malware analysis write-up coming soon. Target repository holds IOC logs.')">View
+                    Incident Report &gt;</button>
+            </div>
+
+            <!-- Case Study 2 -->
+            <div class="glass-card case-card" id="case-phishing">
+                <div>
+                    <div class="case-icon-label">📧 PHISHING TRIAGE</div>
+                    <h3 class="case-title">Header & Attachment Analysis</h3>
+                    <p class="case-summary">
+                        Investigating phishing mails with malicious attachments. Analyzed SPF, DKIM, and extracted
+                        malicious macros.
+                    </p>
+                    <div class="case-workflow">
+                        <div class="wf-step">✔️ Decoded SMTP Headers</div>
+                        <div class="wf-step">✔️ Extracted SPF/DKIM data</div>
+                        <div class="wf-step">✔️ Detonated macros safely</div>
+                    </div>
+                </div>
+                <button class="case-btn" onclick="alert('Phishing report write-up coming soon.')">View Incident Report
+                    &gt;</button>
+            </div>
+
+            <!-- Case Study 3 -->
+            <div class="glass-card case-card" id="case-logs">
+                <div>
+                    <div class="case-icon-label">📊 LOG ANALYSIS</div>
+                    <h3 class="case-title">Web Server Compromise</h3>
+                    <p class="case-summary">
+                        Analyzing Apache web logs to trace an attempted SQL injection exploit. Mapped attacks to target
+                        IPs.
+                    </p>
+                    <div class="case-workflow">
+                        <div class="wf-step">✔️ Parsed Access logs</div>
+                        <div class="wf-step">✔️ Correlated SQL injection signatures</div>
+                        <div class="wf-step">✔️ Hardened DB Queries</div>
+                    </div>
+                </div>
+                <button class="case-btn" onclick="alert('Log correlation log and analysis reports coming soon.')">View
+                    Incident Report &gt;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications & Learning Timeline Section -->
+    <section id="publications">
+        <div class="pub-timeline-container">
+            <!-- Publications column -->
+            <div>
+                <div class="sec-title-container">
+                    <span class="sec-subtitle">RESEARCH & ARTICLES</span>
+                    <h2 class="sec-title" id="pub-section-heading">Academic Work</h2>
+                </div>
+                <div class="pub-list">
+                    <!-- Publication 1 -->
+                    <div class="glass-card pub-card" id="pub-crypto">
+                        <span class="pub-year">2025</span>
+                        <h3 class="pub-title">AI Driven Predictive Models for Crypto Trading</h3>
+                        <p class="pub-journal">Published analysis detailing cryptographic transactions security and
+                            automated forecasting models.</p>
+                    </div>
+                    <!-- Publication 2 -->
+                    <div class="glass-card pub-card" id="pub-healthcare">
+                        <span class="pub-year">2024</span>
+                        <h3 class="pub-title">Strengthening Cybersecurity in Indian Healthcare</h3>
+                        <p class="pub-journal">Comprehensive threat vector assessment regarding medical databases and
+                            compliance benchmarks.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline column -->
+            <div>
+                <div class="sec-title-container">
+                    <span class="sec-subtitle">EDUCATION & MILESTONES</span>
+                    <h2 class="sec-title" id="timeline-section-heading">Professional Journey</h2>
+                </div>
+                <div class="timeline">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">SOC Analyst Specialization</h3>
+                        <p class="timeline-desc">Focussing on blue team tactics, EDR deployments (Wazuh), and log
+                            aggregation tools (Splunk).</p>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2022 - 2026</div>
+                        <h3 class="timeline-title">Bachelor of Engineering</h3>
+                        <p class="timeline-desc">Specialization in Cyber Security at Paavai Engineering College.
+                            Acquired strong theoretical and practical knowledge in network security, system hardening,
+                            and digital forensics.</p>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3 class="timeline-title">Blue Team Lab Operations</h3>
+                        <p class="timeline-desc">Investigated 150+ simulation environments across platforms mapping
+                            attacker techniques (MITRE ATT&CK).</p>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item">
+                        <span class="timeline-dot"></span>
+                        <div class="timeline-date">2022</div>
+                        <h3 class="timeline-title">Introduction to Network Defenses</h3>
+                        <p class="timeline-desc">Acquired core concepts of TCP/IP parameters, DNS security policies, and
+                            foundational cryptography.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="sec-title-container">
+            <span class="sec-subtitle">COMMUNICATION UPLINK</span>
+            <h2 class="sec-title" id="contact-section-heading">Establish Connection</h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-wrap">
+                <!-- Direct Channels -->
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-text-label">Encrypted Mail</div>
+                        <a href="mailto:rsamuel2105@gmail.com" class="contact-text-val">rsamuel2105@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-text-label">Professional Network</div>
+                        <a href="https://linkedin.com/in/samuelr21" target="_blank"
+                            class="contact-text-val">linkedin.com/in/samuelr21</a>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-text-label">Code Repository</div>
+                        <a href="https://github.com/sam-2105" target="_blank"
+                            class="contact-text-val">github.com/sam-2105</a>
+                    </div>
+                </div>
+
+                <!-- Short Location description -->
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="contact-text-label">Location</div>
+                        <div class="contact-text-val">Kanyakumari, India</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secured Contact Form -->
+            <div class="glass-card">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="form-name">Sender Alias</label>
+                            <input type="text" class="form-input" id="form-name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-email">Uplink Gateway (Email)</label>
+                            <input type="email" class="form-input" id="form-email" placeholder="email@example.com"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="form-msg">Transmission Payload (Message)</label>
+                        <textarea class="form-input" id="form-msg" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btn-submit-form"
+                        style="width: 100%; justify-content: center;">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                        SECURE TRANSMISSION
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span>[</span>SEC-OPS<span>]</span> Samuel R
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Samuel R. All rights reserved. System secured via SSL & Zero-Trust principles.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Injection -->
+    <script src="script.js"></script>
+</body>
+
+</html>

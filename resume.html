@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel R. - Cyber Security Analyst Resume</title>
+    <style>
+        /* ==========================================================================
+           ATS-Friendly Printable Resume Stylesheet
+           ========================================================================== */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #111111;
+            background-color: #ffffff;
+            line-height: 1.5;
+            padding: 2.5rem 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Floating print helper button */
+        .print-btn-container {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 100;
+        }
+
+        .print-btn {
+            background-color: #0f172a;
+            color: #ffffff;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .print-btn:hover {
+            background-color: #1e293b;
+            transform: translateY(-2px);
+        }
+
+        .print-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* Header Layout */
+        .header {
+            border-bottom: 2px solid #0f172a;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .name {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #0f172a;
+            margin-bottom: 0.25rem;
+        }
+
+        .title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .contact-item a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Layouts */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #0f172a;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            border-bottom: 1px solid #cbd5e1;
+            padding-bottom: 0.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .summary {
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        /* Skills Directory */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .skill-group {
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .skill-group strong {
+            color: #0f172a;
+        }
+
+        /* Experience and Projects list */
+        .item-row {
+            margin-bottom: 1.5rem;
+        }
+
+        .item-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .item-date {
+            font-size: 0.85rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .item-subtitle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-bullets {
+            list-style-type: disc;
+            margin-left: 1.25rem;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        .item-bullets li {
+            margin-bottom: 0.35rem;
+        }
+
+        .item-bullets li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Certifications grid */
+        .certs-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 1.5rem;
+            font-size: 0.9rem;
+            color: #334155;
+        }
+
+        .cert-item {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Back link */
+        .back-link {
+            display: block;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+        }
+        
+        .back-link a {
+            color: #64748b;
+            text-decoration: underline;
+        }
+
+        /* ==========================================================================
+           Print Overrides
+           ========================================================================== */
+        @media print {
+            body {
+                padding: 0;
+                margin: 0;
+                font-size: 10pt;
+            }
+
+            .print-btn-container,
+            .back-link {
+                display: none !important;
+            }
+
+            .header {
+                margin-bottom: 1.5rem;
+            }
+
+            .section {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Print Button -->
+    <div class="print-btn-container">
+        <button class="print-btn" onclick="window.print()">
+            <svg viewBox="0 0 24 24">
+                <path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/>
+            </svg>
+            Save as PDF / Print
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="name">Samuel R.</h1>
+        <div class="title">Cyber Security Analyst | SOC Analyst</div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email:</strong> <a href="mailto:rsamuel2105@gmail.com">rsamuel2105@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/samuelr21" target="_blank">linkedin.com/in/samuelr21</a>
+            </div>
+            <div class="contact-item">
+                <strong>GitHub:</strong> <a href="https://github.com/sam-2105" target="_blank">github.com/sam-2105</a>
+            </div>
+            <div class="contact-item">
+                <strong>Location:</strong> Tamil Nadu, India
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            Detail-oriented and analytical Cyber Security Professional targeting entry-level SOC Analyst, Cyber Security Analyst, or Threat Detection roles. Demonstrates hands-on proficiency in security information and event management (SIEM) monitoring, packet parsing, and blue team defensive engineering. Skilled in alert triaging, log analysis, threat intelligence mapping (MITRE ATT&CK), and vulnerability scanning. Committed to defending critical digital infrastructure and continuously updating threat containment strategies.
+        </p>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-group">
+                <strong>SIEM & Operations:</strong> Splunk Enterprise, Wazuh EDR, Log Triage, Alert Analysis
+            </div>
+            <div class="skill-group">
+                <strong>Security Tools:</strong> Nessus Vulnerability Scanner, Wireshark, Burp Suite, OSINT
+            </div>
+            <div class="skill-group">
+                <strong>Threat Detection:</strong> MITRE ATT&CK Mapping, IOC Correlation, Threat Intelligence
+            </div>
+            <div class="skill-group">
+                <strong>Networking & OS:</strong> TCP/IP, DNS, Packet Analysis, Kali Linux, Windows Security
+            </div>
+            <div class="skill-group">
+                <strong>Compliance & Frameworks:</strong> OWASP Top 10, ISO 27001, GDPR, HIPAA
+            </div>
+            <div class="skill-group">
+                <strong>Lab Platforms:</strong> TryHackMe, BTLO (Blue Team Labs Online), PortSwigger
+            </div>
+        </div>
+    </section>
+
+    <!-- Cybersecurity Projects -->
+    <section class="section">
+        <h2 class="section-title">Cyber Security Projects</h2>
+        
+        <div class="item-row">
+            <div class="item-header">
+                <h3 class="item-title">SecureID Network</h3>
+                <span class="item-date">2025</span>
+            </div>
+            <div class="item-subtitle">Blockchain-Based Digital Identity Verification System</div>
+            <ul class="item-bullets">
+                <li>Designed a decentralized framework using blockchain smart contracts to securely verify user credentials, eliminating central points of failure.</li>
+                <li>Mitigated Man-in-the-Middle (MITM) and spoofing attacks by implementing cryptographic identity anchors and zero-trust verification pipelines.</li>
+                <li>Configured access validation mechanics using decentralized ledger rules to ensure user identity validation occurs in compliance with compliance frameworks.</li>
+                <li>Implemented logging parameters to record state verifications for security auditing.</li>
+            </ul>
+        </div>
+
+        <div class="item-row">
+            <div class="item-header">
+                <h3 class="item-title">HashLock</h3>
+                <span class="item-date">2024</span>
+            </div>
+            <div class="item-subtitle">Lightweight File Integrity Monitoring & Validation System</div>
+            <ul class="item-bullets">
+                <li>Developed a file integrity checker that generates and logs SHA-256 cryptographic hashes to detect unauthorized changes in target directories.</li>
+                <li>Built real-time background validation workflows to compare system snapshots and issue security alerts on modification, deletion, or creation.</li>
+                <li>Optimized directory scans utilizing local data files for state persistence, minimizing resource footprint on system agents.</li>
+                <li>Engineered custom alert logging layouts designed for SIEM intake integration.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+        <h2 class="section-title">Professional Certifications</h2>
+        <div class="certs-list">
+            <div class="cert-item"><strong>EC-Council:</strong> Certified SOC Analyst (CSA)</div>
+            <div class="cert-item"><strong>Blue Team Labs:</strong> Certified Blue Team Practitioner</div>
+            <div class="cert-item"><strong>Cyber Academy:</strong> Certified IT Infrastructure & Cyber SOC Analyst</div>
+            <div class="cert-item"><strong>CNSP:</strong> Certified Network Security Practitioner</div>
+            <div class="cert-item"><strong>CSI Linux:</strong> Certified Investigator</div>
+            <div class="cert-item"><strong>Cisco:</strong> Introduction to Cybersecurity</div>
+            <div class="cert-item"><strong>NPTEL:</strong> Programming in Java</div>
+            <div class="cert-item"><strong>NPTEL:</strong> Cloud Computing</div>
+            <div class="cert-item"><strong>IIT Bombay (Spoken Tutorial):</strong> PHP and MySQL</div>
+        </div>
+    </section>
+
+    <!-- Research Publications -->
+    <section class="section">
+        <h2 class="section-title">Publications</h2>
+        <div class="item-row">
+            <div class="item-header">
+                <h3 class="item-title">AI Driven Predictive Models for Crypto Trading</h3>
+                <span class="item-date">2025</span>
+            </div>
+            <div class="item-subtitle">Research Publication on predictive systems and cryptocurrency ledger security.</div>
+        </div>
+        <div class="item-row">
+            <div class="item-header">
+                <h3 class="item-title">Strengthening Cybersecurity in Indian Healthcare</h3>
+                <span class="item-date">2024</span>
+            </div>
+            <div class="item-subtitle">Strategic analysis of vulnerability vectors in critical medical infrastructure under HIPAA guidelines.</div>
+        </div>
+    </section>
+
+    <!-- Timeline & Education -->
+    <section class="section">
+        <h2 class="section-title">Education & Milestones</h2>
+        <div class="item-row">
+            <div class="item-header">
+                <h3 class="item-title">Cyber Security Studies & Industry Labs</h3>
+                <span class="item-date">2022 - Present</span>
+            </div>
+            <div class="item-subtitle">Self-Directed Training & Simulation Platforms</div>
+            <ul class="item-bullets">
+                <li>Completed 150+ interactive labs across TryHackMe (Ranked Top 1%), PortSwigger Web Academy, and BTLO.</li>
+                <li>Conducted packet analysis training mapping normal/anomalous networking parameters in Wireshark.</li>
+                <li>Participated in local and online CTF (Capture the Flag) security operations.</li>
+            </ul>
+        </div>
+        <div class="item-row">
+            <div class="item-header">
+                <h3 class="item-title">Bachelor of Engineering (B.E.)</h3>
+                <span class="item-date">2022 - 2026</span>
+            </div>
+            <div class="item-subtitle">Paavai Engineering College — Specialization in Cyber Security</div>
+            <ul class="item-bullets">
+                <li>Acquired deep foundational knowledge in network defenses, cryptography, secure programming, and system hardening protocols.</li>
+                <li>Completed academic projects focusing on digital investigations, web application security (OWASP Top 10), and vulnerability assessment.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="back-link">
+        <a href="index.html">← Back to Interactive Portfolio</a>
+    </div>
+
+</body>
+</html>
