@@ -404,19 +404,38 @@ function initContactForm() {
         if (!name || !email || !msg) return;
 
         // Visual alert simulation in terminal-like dialog
-        const originalBtnText = form.querySelector('button').innerHTML;
         const btn = form.querySelector('button');
+        const originalBtnText = btn.innerHTML;
         btn.disabled = true;
         btn.innerHTML = '<span class="hero-pulse"></span> PROCESSING TRANSMISSION...';
 
-        setTimeout(() => {
+        // Submit form data via FormSubmit.co AJAX endpoint
+        fetch('https://formsubmit.co/ajax/rsamuel2105@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                name: name,
+                email: email,
+                message: msg
+            })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
             btn.style.background = 'var(--green)';
             btn.style.borderColor = 'var(--green)';
             btn.style.color = '#000';
             btn.innerHTML = 'SUCCESS: TRANSMISSION SECURED';
             
             // Output confirmation log to user
-            alert(`[LOG] Communication channel secure.\n\nFrom: ${name} <${email}>\nStatus: Message queued. Samuel R. will respond shortly.\nKey Signature: SHA256 VALIDATED`);
+            alert(`[LOG] Communication channel secure.\n\nFrom: ${name} <${email}>\nStatus: Message transmitted successfully to Samuel R.\nKey Signature: SHA256 VALIDATED`);
             
             // Reset form
             form.reset();
@@ -428,7 +447,24 @@ function initContactForm() {
                 btn.style.color = '';
                 btn.innerHTML = originalBtnText;
             }, 3000);
-        }, 1500);
+        })
+        .catch(err => {
+            console.error(err);
+            btn.style.background = 'var(--red)';
+            btn.style.borderColor = 'var(--red)';
+            btn.style.color = '#fff';
+            btn.innerHTML = 'ERROR: UPLINK FAILED';
+            
+            alert(`[ERROR] Transmission failed.\n\nPlease send your message directly to: rsamuel2105@gmail.com`);
+            
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.style.background = '';
+                btn.style.borderColor = '';
+                btn.style.color = '';
+                btn.innerHTML = originalBtnText;
+            }, 3000);
+        });
     });
 }
 
