@@ -350,8 +350,133 @@
             <h2 class="sec-title" id="projects-section-heading">Featured Security Work</h2>
         </div>
 
-        <div class="projects-container">
-            <!-- Project 1: SecureID Network -->
+            <!-- Project 1: Keylogger Detection & Malware Analysis Lab -->
+            <div class="project-card" id="project-keylogger-analysis">
+                <div class="project-info-wrap">
+                    <span class="project-tag">DETECTION ENGINEERING & LAB</span>
+                    <h3 class="project-name">KEYLOGGER DETECTION & MALWARE ANALYSIS</h3>
+                    <div class="project-desc-text">
+                        Conducted static analysis of a Python-based keylogger sample in a controlled lab environment.
+                        Extracted Indicators of Compromise (IOCs) and documented malware behavior.
+                    </div>
+
+                    <div class="project-problem">
+                        <div class="project-problem-label">
+                            <span class="hero-pulse" style="background:var(--red); animation:none;"></span>
+                            PROBLEM VECTOR:
+                        </div>
+                        <div class="project-problem-desc">
+                            Undetected execution of keyboard logging scripts results in credential theft, data
+                            exfiltration, and active user exposure.
+                        </div>
+                    </div>
+
+                    <div class="project-specs">
+                        <h4 class="specs-title">Analysis Metrics</h4>
+                        <div class="specs-list">
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Static Behavior Extraction
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                YARA & Sigma Rule Generation
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                MITRE ATT&CK Mapping
+                            </div>
+                            <div class="specs-item">
+                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                                Incident Response Docs
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">Malware Analysis</span>
+                        <span class="tech-badge">SOC Operations</span>
+                        <span class="tech-badge">Threat Hunting</span>
+                        <span class="tech-badge">Detection Engineering</span>
+                        <span class="tech-badge">YARA</span>
+                        <span class="tech-badge">Sigma</span>
+                        <span class="tech-badge">MITRE ATT&CK</span>
+                        <span class="tech-badge">Incident Response</span>
+                        <span class="tech-badge">Cybersecurity</span>
+                    </div>
+
+                    <a href="https://github.com/sam-2105/Keylogger-Detection-Lab.git" class="btn btn-secondary"
+                        target="_blank" id="btn-keylogger-git">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Code Repository
+                    </a>
+                </div>
+
+                <div class="project-visual">
+                    <span class="project-visual-label">Malware Analysis Pipeline</span>
+                    <!-- Keylogger SVG workflow -->
+                    <svg viewBox="0 0 400 300" class="interactive-svg-diag">
+                        <!-- Connectors with animation -->
+                        <path d="M 60 150 L 140 150" stroke="var(--cyan)" stroke-width="2" class="svg-connector" />
+                        <path d="M 200 150 L 280 100" stroke="var(--cyan)" stroke-width="1.5" class="svg-connector" />
+                        <path d="M 200 150 L 280 200" stroke="var(--purple)" stroke-width="1.5" class="svg-connector" />
+
+                        <!-- Node 1: Keylogger Sample -->
+                        <g class="svg-node"
+                            data-info="Isolated Sandbox: Run keylogger sample safely to monitor keystroke hooks, file access, and process activity.">
+                            <rect x="20" y="120" width="40" height="60" rx="4" fill="rgba(8, 14, 32, 0.9)"
+                                stroke="var(--cyan)" stroke-width="2" />
+                            <text x="40" y="154" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">SAMPLE</text>
+                        </g>
+
+                        <!-- Node 2: Static & Dynamic Analysis -->
+                        <g class="svg-node"
+                            data-info="Behavior Triage: Extract keystroke logging APIs (e.g., pynput, keyboard, WinAPI) and exfiltration endpoints.">
+                            <circle cx="170" cy="150" r="30" fill="rgba(8, 14, 32, 0.9)" stroke="var(--purple)"
+                                stroke-width="2" />
+                            <text x="170" y="153" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">ANALYSIS</text>
+                            <circle cx="170" cy="150" r="36" fill="none" stroke="rgba(189, 0, 255, 0.2)"
+                                stroke-dasharray="4" />
+                        </g>
+
+                        <!-- Node 3: Indicators of Compromio -->
+                        <g class="svg-node"
+                            data-info="IOC & Attack Mapping: Identify file hashes, log target locations, and map tactics to MITRE ATT&CK.">
+                            <circle cx="310" cy="100" r="24" fill="rgba(8, 14, 32, 0.9)" stroke="var(--green)"
+                                stroke-width="2" />
+                            <text x="310" y="103" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">IOCs</text>
+                        </g>
+
+                        <!-- Node 4: YARA & Sigma Rules -->
+                        <g class="svg-node"
+                            data-info="Detection Engineering: Develop YARA rules for memory scanning and Sigma rules for SIEM event log correlation.">
+                            <circle cx="310" cy="200" r="24" fill="rgba(8, 14, 32, 0.9)" stroke="var(--red)"
+                                stroke-width="2" />
+                            <text x="310" y="203" font-family="var(--font-mono)" font-size="8" fill="#fff"
+                                text-anchor="middle">RULES</text>
+                            <circle cx="310" cy="200" r="30" fill="none" stroke="rgba(255, 62, 62, 0.3)"
+                                stroke-dasharray="2" />
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Project 2: SecureID Network -->
             <div class="project-card" id="project-secureid">
                 <div class="project-info-wrap">
                     <span class="project-tag">DECENTRALIZED ARCHITECTURE</span>
@@ -480,7 +605,7 @@
                 </div>
             </div>
 
-            <!-- Project 2: HashLock -->
+            <!-- Project 3: HashLock -->
             <div class="project-card" id="project-hashlock">
                 <div class="project-info-wrap">
                     <span class="project-tag">INTEGRITY & MONITORING</span>
@@ -592,132 +717,6 @@
                                 stroke-width="2" />
                             <text x="310" y="203" font-family="var(--font-mono)" font-size="8" fill="#fff"
                                 text-anchor="middle">ALERT</text>
-                            <circle cx="310" cy="200" r="30" fill="none" stroke="rgba(255, 62, 62, 0.3)"
-                                stroke-dasharray="2" />
-                        </g>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Project 3: Keylogger Detection & Malware Analysis Lab -->
-            <div class="project-card" id="project-keylogger-analysis">
-                <div class="project-info-wrap">
-                    <span class="project-tag">DETECTION ENGINEERING & LAB</span>
-                    <h3 class="project-name">KEYLOGGER DETECTION & MALWARE ANALYSIS</h3>
-                    <div class="project-desc-text">
-                        Conducted static analysis of a Python-based keylogger sample in a controlled lab environment.
-                        Extracted Indicators of Compromise (IOCs) and documented malware behavior.
-                    </div>
-
-                    <div class="project-problem">
-                        <div class="project-problem-label">
-                            <span class="hero-pulse" style="background:var(--red); animation:none;"></span>
-                            PROBLEM VECTOR:
-                        </div>
-                        <div class="project-problem-desc">
-                            Undetected execution of keyboard logging scripts results in credential theft, data
-                            exfiltration, and active user exposure.
-                        </div>
-                    </div>
-
-                    <div class="project-specs">
-                        <h4 class="specs-title">Analysis Metrics</h4>
-                        <div class="specs-list">
-                            <div class="specs-item">
-                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg>
-                                Static Behavior Extraction
-                            </div>
-                            <div class="specs-item">
-                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg>
-                                YARA & Sigma Rule Generation
-                            </div>
-                            <div class="specs-item">
-                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg>
-                                MITRE ATT&CK Mapping
-                            </div>
-                            <div class="specs-item">
-                                <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
-                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
-                                </svg>
-                                Incident Response Docs
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">Malware Analysis</span>
-                        <span class="tech-badge">SOC Operations</span>
-                        <span class="tech-badge">Threat Hunting</span>
-                        <span class="tech-badge">Detection Engineering</span>
-                        <span class="tech-badge">YARA</span>
-                        <span class="tech-badge">Sigma</span>
-                        <span class="tech-badge">MITRE ATT&CK</span>
-                        <span class="tech-badge">Incident Response</span>
-                        <span class="tech-badge">Cybersecurity</span>
-                    </div>
-
-                    <a href="https://github.com/sam-2105/Keylogger-Detection-Lab.git" class="btn btn-secondary"
-                        target="_blank" id="btn-keylogger-git">
-                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                        Code Repository
-                    </a>
-                </div>
-
-                <div class="project-visual">
-                    <span class="project-visual-label">Malware Analysis Pipeline</span>
-                    <!-- Keylogger SVG workflow -->
-                    <svg viewBox="0 0 400 300" class="interactive-svg-diag">
-                        <!-- Connectors with animation -->
-                        <path d="M 60 150 L 140 150" stroke="var(--cyan)" stroke-width="2" class="svg-connector" />
-                        <path d="M 200 150 L 280 100" stroke="var(--cyan)" stroke-width="1.5" class="svg-connector" />
-                        <path d="M 200 150 L 280 200" stroke="var(--purple)" stroke-width="1.5" class="svg-connector" />
-
-                        <!-- Node 1: Keylogger Sample -->
-                        <g class="svg-node"
-                            data-info="Isolated Sandbox: Run keylogger sample safely to monitor keystroke hooks, file access, and process activity.">
-                            <rect x="20" y="120" width="40" height="60" rx="4" fill="rgba(8, 14, 32, 0.9)"
-                                stroke="var(--cyan)" stroke-width="2" />
-                            <text x="40" y="154" font-family="var(--font-mono)" font-size="8" fill="#fff"
-                                text-anchor="middle">SAMPLE</text>
-                        </g>
-
-                        <!-- Node 2: Static & Dynamic Analysis -->
-                        <g class="svg-node"
-                            data-info="Behavior Triage: Extract keystroke logging APIs (e.g., pynput, keyboard, WinAPI) and exfiltration endpoints.">
-                            <circle cx="170" cy="150" r="30" fill="rgba(8, 14, 32, 0.9)" stroke="var(--purple)"
-                                stroke-width="2" />
-                            <text x="170" y="153" font-family="var(--font-mono)" font-size="8" fill="#fff"
-                                text-anchor="middle">ANALYSIS</text>
-                            <circle cx="170" cy="150" r="36" fill="none" stroke="rgba(189, 0, 255, 0.2)"
-                                stroke-dasharray="4" />
-                        </g>
-
-                        <!-- Node 3: Indicators of Compromise -->
-                        <g class="svg-node"
-                            data-info="IOC & Attack Mapping: Identify file hashes, log target locations, and map tactics to MITRE ATT&CK.">
-                            <circle cx="310" cy="100" r="24" fill="rgba(8, 14, 32, 0.9)" stroke="var(--green)"
-                                stroke-width="2" />
-                            <text x="310" y="103" font-family="var(--font-mono)" font-size="8" fill="#fff"
-                                text-anchor="middle">IOCs</text>
-                        </g>
-
-                        <!-- Node 4: YARA & Sigma Rules -->
-                        <g class="svg-node"
-                            data-info="Detection Engineering: Develop YARA rules for memory scanning and Sigma rules for SIEM event log correlation.">
-                            <circle cx="310" cy="200" r="24" fill="rgba(8, 14, 32, 0.9)" stroke="var(--red)"
-                                stroke-width="2" />
-                            <text x="310" y="203" font-family="var(--font-mono)" font-size="8" fill="#fff"
-                                text-anchor="middle">RULES</text>
                             <circle cx="310" cy="200" r="30" fill="none" stroke="rgba(255, 62, 62, 0.3)"
                                 stroke-dasharray="2" />
                         </g>
